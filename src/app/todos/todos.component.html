@@ -13,6 +13,13 @@
     <span>{{ todo.text }}</span>
     <span>{{ todo.created }}</span>
     <span>{{ todo.done }}</span>
-    <span>{{ todo.priority }}</span>
+    <span class="priority">
+      <span [ngSwitch]="todo.priority">
+        <span *ngSwitchCase="1">high</span>
+        <span *ngSwitchCase="2">medium</span>
+        <span *ngSwitchDefault>low</span>
+      </span>
+      priority
+    </span>
   </li>
 </ol>
