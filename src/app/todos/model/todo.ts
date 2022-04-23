@@ -5,7 +5,7 @@
 
 export interface Todo {
   text: string;
-  created: Date;
+  created: number;
   done: boolean;
   priority: number;
 }

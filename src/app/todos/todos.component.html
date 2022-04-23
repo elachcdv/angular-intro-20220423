@@ -2,6 +2,17 @@
 
 <input [(ngModel)]="text" />
 
+<button (click)="addTodo()">add</button>
+
 <button (click)="clear()">Clear</button>
 
 <div *ngIf="todos.length === 0">The list is empty</div>
+
+<ol>
+  <li *ngFor="let todo of todos">
+    <span>{{ todo.text }}</span>
+    <span>{{ todo.created }}</span>
+    <span>{{ todo.done }}</span>
+    <span>{{ todo.priority }}</span>
+  </li>
+</ol>
