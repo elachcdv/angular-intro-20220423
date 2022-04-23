@@ -10,6 +10,7 @@
 
 <ol>
   <li *ngFor="let todo of todos">
+    <span [ngClass]="{done: todo.done}"> {{ todo.text }}</span>
     <span>{{ todo.text }}</span>
     <span>{{ todo.created }}</span>
     <span>{{ todo.done }}</span>
