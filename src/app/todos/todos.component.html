@@ -1,1 +1,7 @@
-<p>todos works!</p>
+<div *ngIf="!text">Type the todo below...</div>
+
+<input [(ngModel)]="text" />
+
+<button (click)="clear()">Clear</button>
+
+<div *ngIf="todos.length === 0">The list is empty</div>
