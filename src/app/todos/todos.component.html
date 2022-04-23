@@ -1,28 +1,49 @@
-<div *ngIf="!text">Type the todo below...</div>
+<div *ngIf="!text">
+  Type the todo below...
+</div>
 
-<input [(ngModel)]="text" (keyup.enter)="addTodo()" />
+<input
+  [(ngModel)]="text"
+  (keyup.enter)="addTodo()"
+/>
 
 <button (click)="addTodo()">add</button>
 
 <button (click)="clear()">Clear</button>
 
-<div *ngIf="todos.length === 0">The list is empty</div>
+<div *ngIf="todos.length === 0">
+  The list is empty
+</div>
 <!-- <ng-container *ngIf="todos.length === 0">The list is empty</ng-container> -->
 
 <ol>
   <li *ngFor="let todo of todos">
-    <input type="checkbox" [(ngModel)]="todo.done" />
-    <span [ngClass]="{done: todo.done}" [ngStyle]="style">
+    <input
+      type="checkbox"
+      [(ngModel)]="todo.done"
+    />
+    <span
+      [ngClass]="{done: todo.done}"
+      [ngStyle]="style"
+    >
       {{ todo.text }}
     </span>
     <span class="priority">
       <span [ngSwitch]="todo.priority">
-        <span *ngSwitchCase="1">high </span>
-        <span *ngSwitchCase="2">medium </span>
-        <span *ngSwitchDefault>low </span>
+        <span *ngSwitchCase="1"
+          >high
+        </span>
+        <span *ngSwitchCase="2"
+          >medium
+        </span>
+        <span *ngSwitchDefault
+          >low
+        </span>
       </span>
       priority
     </span>
-    <button (click)="setDone(todo)">&check;</button>
+    <button (click)="setDone(todo)">
+      &check;
+    </button>
   </li>
 </ol>
