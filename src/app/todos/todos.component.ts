@@ -10,6 +10,10 @@ export class TodosComponent implements OnInit {
   public todos: Todo[] = [];
   public text: string = '';
 
+  public style = {
+    fontSize: '40px',
+    backgroudColor: 'red',
+  };
   public clear() {
     this.text = '';
   }
@@ -22,6 +26,11 @@ export class TodosComponent implements OnInit {
       priority: Math.ceil(Math.random() * 3),
     };
     this.todos.push(todo);
+    this.clear();
+  }
+
+  public setDone(todo: Todo) {
+    todo.done = true;
   }
 
   constructor() {}
