@@ -4,9 +4,10 @@ import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import { HelloComponent } from './hello/hello.component';
 import { TodosComponent } from './todos/todos.component';
+import { CounterComponent } from './counter/counter.component';
 
 @NgModule({
-  declarations: [AppComponent, HelloComponent, TodosComponent],
+  declarations: [AppComponent, HelloComponent, TodosComponent, CounterComponent],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
   bootstrap: [AppComponent],
