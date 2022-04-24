@@ -10,6 +10,7 @@ import {TodoComponent} from './todos/todo/todo.component';
 import {TimerComponent} from './timer/timer.component';
 import {UsersComponent} from './users/users.component';
 import {HttpClientModule} from '@angular/common/http';
+import {HighlightDirective} from './highlight.directive';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import {HttpClientModule} from '@angular/common/http';
     TodoComponent,
     TimerComponent,
     UsersComponent,
+    HighlightDirective,
   ],
   imports: [
     BrowserModule,
