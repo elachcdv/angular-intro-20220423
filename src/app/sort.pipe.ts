@@ -16,11 +16,14 @@ export class SortPipe
   ): User[] {
     return array.sort(
       (first: User, second: User) => {
-        return first[property]
-          .toString()
-          .localeCompare(
-            second[property].toString(),
-          );
+        const firstProperty =
+          first[property].toString();
+        const secondProperty =
+          second[property].toString();
+
+        return firstProperty.localeCompare(
+          secondProperty,
+        );
       },
     );
   }
