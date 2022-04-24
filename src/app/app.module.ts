@@ -12,6 +12,7 @@ import {UsersComponent} from './users/users.component';
 import {HttpClientModule} from '@angular/common/http';
 import {HighlightDirective} from './highlight.directive';
 import { ReversePipe } from './reverse.pipe';
+import { SortPipe } from './sort.pipe';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { ReversePipe } from './reverse.pipe';
     UsersComponent,
     HighlightDirective,
     ReversePipe,
+    SortPipe,
   ],
   imports: [
     BrowserModule,
