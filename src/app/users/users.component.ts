@@ -15,7 +15,7 @@ import {UsersResponse} from './model/users-response';
 export class UsersComponent
   implements OnInit
 {
-  public users: User[];
+  public users: User[] = [];
 
   constructor(
     private http: HttpClient,
