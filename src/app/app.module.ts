@@ -11,6 +11,7 @@ import {TimerComponent} from './timer/timer.component';
 import {UsersComponent} from './users/users.component';
 import {HttpClientModule} from '@angular/common/http';
 import {HighlightDirective} from './highlight.directive';
+import { ReversePipe } from './reverse.pipe';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import {HighlightDirective} from './highlight.directive';
     TimerComponent,
     UsersComponent,
     HighlightDirective,
+    ReversePipe,
   ],
   imports: [
     BrowserModule,

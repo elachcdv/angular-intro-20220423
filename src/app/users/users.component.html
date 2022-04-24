@@ -3,7 +3,9 @@
   <span
     appHighlight
     appHighlightColor="#0ff"
-    >{{ user.first_name }}</span
+    >{{
+      user.first_name | reverse
+    }}</span
   >
   <span>{{ user.last_name }}</span>
   <span appHighlight>{{
