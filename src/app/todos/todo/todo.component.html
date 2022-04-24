@@ -1,0 +1,10 @@
+<div [ngClass]="{done: todoInput.done}">
+  <input
+    [(ngModel)]="todoInput.done"
+    type="checkbox"
+  />
+  {{ todoInput.text }}
+  <button (click)="onClickDelete()">
+    &cross;
+  </button>
+</div>

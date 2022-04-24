@@ -1,4 +1,7 @@
-import {Component, OnInit} from '@angular/core';
+import {
+  Component,
+  OnInit,
+} from '@angular/core';
 import {Todo} from './model/todo';
 
 @Component({
@@ -6,7 +9,9 @@ import {Todo} from './model/todo';
   templateUrl: './todos.component.html',
   styleUrls: ['./todos.component.scss'],
 })
-export class TodosComponent implements OnInit {
+export class TodosComponent
+  implements OnInit
+{
   public todos: Todo[] = [];
   public text: string = '';
 
@@ -23,14 +28,19 @@ export class TodosComponent implements OnInit {
       text: this.text,
       created: Date.now(),
       done: false,
-      priority: Math.ceil(Math.random() * 3),
+      priority: Math.ceil(
+        Math.random() * 3,
+      ),
     };
     this.todos.push(todo);
     this.clear();
   }
 
-  public setDone(todo: Todo) {
-    todo.done = true;
+  public deleteTodo(todo: Todo) {
+    const index =
+      this.todos.indexOf(todo);
+
+    this.todos.splice(index, 1);
   }
 
   constructor() {}
